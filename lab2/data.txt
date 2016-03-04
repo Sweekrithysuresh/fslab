@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -70,7 +69,7 @@ void Student::pack(string filename)
 {
     string buffer;
     fstream fp;
-    fp.open(filename.c_str(),ios::out|ios::app);
+    fp.open(filename.c_str(),ios::out);
     buffer= usn+"|"+name+"|"+sem+"|"+branch;
     buffer.resize(100,'$');
     fp<<buffer<<endl;
